@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="core.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Get the best Taste <span class="green">Now!</span></h1>
+        <p class="desc">Best cooks and best delivery guys all at your service. Hot tasty food will reach you in 60
+            minutes.</p>
+    </header>
+    <main class="container">
+        <section class="formWrap">
+            <div class="form">
+                <h2>What’s your Taste?</h2>
+                <p>Fill out the form and let us know your taste.</p>
+                <form action="#">
+                    <label for="">
+                        <div class="info">
+                            <p>Select your Meal</p>
+                            <span class="green">View menu</span>
+                        </div>
+                        <select>
+                            <option value="">What’s your Taste?</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <button class="addNew" type="button">Add 1 Taste <span class="green plus">+</span></button>
+                    </label>
+                    <div class="order">
+                        <label for="">
+                            Order name
+                            <input placeholder="Your name" type="text">
+                        </label>
+                        <label for="">
+                            Phone number
+                            <div class="tel">
+                                <select>
+                                    <option value="VN">VN</option>
+                                </select>
+                                <input placeholder="(+84) 123 456 789" type="tel">
+                            </div>
+                        </label>
+                    </div>
+                    <label for="">
+                        Your Address
+                        <div class="adres">
+                            <input type="text" placeholder="17 Acb Street">
+                            <img src="assets/images/local-icon.svg" alt="icon">
+                        </div>
+                    </label>
+                    <label for="" class="method">
+                        Payment Method
+                        <select name="" id="">
+                            <option value="">I'll pay cash</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </label>
+                    <label for="">
+                        Note for us
+                        <textarea placeholder="More spicy, more sauce, ..." cols="30" rows="4"></textarea>
+                    </label>
+                    <p class="result">You will pay <span class="total green">$0.00</span></p>
+                    <div class="action">
+                        <button>Order now</button>
+                    </div>
+                </form>
+            </div>
+            <div class="image"><img src="assets/images/Image.png" alt="img"></div>
+        </section>
+    </main>
+</body>
+
+</html>

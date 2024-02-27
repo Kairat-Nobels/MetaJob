@@ -1,0 +1,193 @@
+:root {
+    --black: #23262F;
+    --main-color: #353945;
+    --green-bg: #04B90B;
+    --green-text: #04B90B;
+    --desc-color: #777E91;
+}
+
+header {
+    width: 770px;
+    margin: 60px auto 104px;
+    text-align: center;
+}
+
+h1 {
+    color: var(--black);
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+.green {
+    color: var(--green-text);
+}
+
+.desc {
+    color: var(--desc-color);
+    line-height: 36px;
+    font-size: 24px;
+}
+
+.formWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    font-family: "Poppins", sans-serif;
+    padding-bottom: 60px;
+}
+
+.image {
+    max-width: 540px;
+}
+
+.image img {
+    width: 100%;
+}
+
+.form {
+    width: 524px;
+}
+
+.form h2 {
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--main-color);
+    margin-bottom: 4px;
+}
+
+.form>p {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--main-color);
+}
+
+.form form {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+form label {
+    color: var(--main-color);
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form select,
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 12px;
+    margin-top: 8px;
+    border: 1px solid rgb(119, 126, 145);
+}
+
+.addNew {
+    background: transparent;
+    border: none;
+    padding: 5px 8px;
+    color: var(--green-text);
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.addNew .plus {
+    font-size: 24px;
+}
+
+.order {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.adres {
+    position: relative;
+}
+
+.adres img {
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    width: 20px;
+}
+
+.tel {
+    width: 256px;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 35px 7px 20px;
+    border: 1px solid rgb(119, 126, 145);
+    border-radius: 12px;
+}
+
+.tel input,
+.tel select {
+    margin: 0;
+    border: none;
+    padding: 0;
+    width: auto;
+}
+
+.tel input {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    width: 140px;
+}
+
+.method {
+    width: 256px;
+}
+
+textarea {
+    color: rgb(119, 126, 145);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    font-family: "Poppins";
+    resize: none;
+}
+
+.result {
+    margin-top: -16px;
+    color: rgb(119, 126, 145);
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.total {
+    font-family: "Alice";
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 27px;
+}
+
+.action button {
+    border-radius: 8px;
+    background: var(--green-bg);
+    color: rgb(252, 252, 253);
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
