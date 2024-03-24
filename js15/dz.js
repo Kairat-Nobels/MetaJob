@@ -1,82 +1,40 @@
-// Задание 1
-// Напишите функцию, которая найдёт сумму квадратных корней элементов массива и округлит её до двух знаков после запятой
-// [1, 2, 3, 4, 5]-- > 8.382332347441762 -- > 8.38
+// Скидываем репозиторием!
+// 1) Напишите функцию getFullName, которая принимает объект user с полями firstName и lastName, и возвращает полное имя.Если какое - либо из полей отсутствует, используйте значения по умолчанию.
 console.log("\t\t\t\tЗадание №1");
-function foo1(arr) {
-    let sum = 0;
-    for (let n of arr) {
-        sum += Math.sqrt(n);
-    }
-    return sum.toFixed(2);
+function getFullName(user) {
+    const { firstName = 'Nobel', lastName = 'Alfred' } = user;
+    return `${firstName} ${lastName}`;
 }
-const arr1 = [1, 2, 3, 4, 5];
-console.log(foo1(arr1));
+console.log(getFullName({ firstName: "Kairat", lastName: "Joloi uulu" }));
+console.log(getFullName({}));
+console.log(getFullName({ firstName: "Eminem" }));
 
-// Задание 2
-// Напишите функцию на проверку если ли в массиве есть два одинаковых элемента подряд.
-// [1, 2, 3, 3, 4, 5]-- > true
-//     [1, 2, 3]-- > false
-//     ['hello', 'my', 'my', 'friend']-- > true
+
+// 2) Напишите функцию printCoordinates, которая принимает объект point с полями x и y, и выводит координаты точки.
 console.log("\t\t\t\tЗадание №2");
-function foo2(arr) {
-    let res = false;
-    for (let i = 0; i < arr.length; i++) {
-        if (i < arr.length && arr[i] === arr[i + 1]) res = true;
-    }
-    return res;
+function printCoordinates({ x, y }) {
+    console.log("x:", x, "\ty:", y);
 }
-console.log(foo2([1, 2, 3, 3, 4, 5]));
-console.log(foo2([1, 2, 3]));
-console.log(foo2(['hello', 'my', 'my', 'friend']));
-// Задание 3
-// Напишите функцию, которая принимает в себя строку и посчитает сколько в ней гласных букв.
-// В строке будут только русские слова.
-// Гласных букв - десять: а, у, о, и, э, ы, я, ю, е, ё
-// 'привет' -- > 2
+printCoordinates({ x: 23, y: 23 });
+printCoordinates({ x: 10, y: 0 });
+printCoordinates({ x: 0, y: 2 });
+// 3) У вас есть вложенный массив const data = {   
+//     products: [       
+//         { id: 1, name: 'Product 1' },
+//         { id: 2, name: 'Product 2' }
+//     ]
+// Напишите функцию, используя деструктуризацию выводите название продуктов:
+// name: Product1
+// name: Product2
 console.log("\t\t\t\tЗадание №3");
-function foo3(str) {
-    const glas = ["а", "у", "о", "и", "э", "ы", "я", "ю", "е", "ё"]
-    let count = 0;
-    for (let i of str) {
-        if (glas.includes(i)) count++;
-    }
-    return count;
-}
-console.log(foo3('приветики'));
-// Задание 4(дополнительно)
-// Напишите функцию, которая реализует функциональность метода filter.Функция принимает массив и callback.
-// Например если мы фильтруем массив на чётные числа c помощью filter так:
-// const arr = [1, 2, 3, 4, 5]
-// arr.filter(el => el % 2 === 0)-- > [2, 4]
-// То наша функция должна делать то же самое:
-// bizdinFilter(arr, callback)-- > [2, 4]
-console.log("\t\t\t\tЗадание №4");
-function bizdinFilter(arr, callback) {
-    let res = [];
-    for (let i = 0; i < arr.length; i++) {
-        if (callback(arr[i], i, arr)) res.push(arr[i]);
-    }
-    return res;
-}
-const arr = [1, 2, 3, 4, 5]
-console.log("filter: ", arr.filter(el => el % 2 === 0));
-console.log("bizdinFilter: ", bizdinFilter(arr, el => el % 2 === 0));
+const data = {
+    products: [
+        { id: 1, name: 'Product 1' },
+        { id: 2, name: 'Product 2' }
+    ]
+};
 
-// Так же пару задач с Codewars(код можете скопировать и вставить к конец кода, но работаем с самом Codewars)
-function numberToString(num) {
-    return num.toString();
+function getName({ products }) {
+    for (let { name } of products) console.log("name: ", name);
 }
-function basicOp(operation, value1, value2) {
-    switch (operation) {
-        case '+':
-            return value1 + value2;
-        case '-':
-            return value1 - value2;
-        case '*':
-            return value1 * value2;
-        case '/':
-            return value1 / value2;
-        default:
-            return 0;
-    }
-}
+getName(data)
